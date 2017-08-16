@@ -1,3 +1,4 @@
+/*Modulation excersise*/
 s.boot();
 
 (
@@ -23,4 +24,6 @@ SynthDef(\synth, { arg freq = 20,  amp = 1;
 ~synth = Synth(\synth);
 
 ~synth.free();
+
+s.stop();
 

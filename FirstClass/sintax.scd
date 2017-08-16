@@ -3,13 +3,12 @@ m;
 
 s.boot
 
-/*
-Using client
-*/
+/*Using client*/
 (
 n = 7 + 8;
 n.postln;
 )
+
 
 /*Using server*/
 
@@ -21,4 +20,7 @@ there are signals to produce sounds, signals
 {SinOsc.ar()}.play(); //ar = audio rate
 // the {} means that we have a function, and all respond to the method play
 // [cmd + .] stop the production of signals in the server
+// [cmd + enter] starts play
 {SinOsc.ar( 400, 0, 0.5 ) }.play();
+// [cmd + d] takes you to documentation of the object
+
