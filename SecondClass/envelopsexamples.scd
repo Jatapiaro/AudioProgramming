@@ -1,6 +1,6 @@
 s.boot();
 
-Env.linen(5, 1, 9).plot();
+Env.perc(0, 0.5,5).plot();
 
 // This is the basic syntax for a synth definition
 
@@ -19,7 +19,7 @@ SynthDef(\syntho, { | freq = 500, gate = 1 |
 	* The action is an event that happens when the env ends read
 	* with donde 2, when the event ends, we dont need the synth.free
 	*/
-	env = EnvGen.kr(Env.linen(5, 1, 9), gate, doneAction:2);
+	env = EnvGen.kr(Env.perc(0, 0.5, 5), gate, doneAction:2);
 	sinSignal = SinOsc.ar(freq, 0, 0.6);
 
 	// we need tp multiplicate to scale dinamically the signal
@@ -29,7 +29,7 @@ SynthDef(\syntho, { | freq = 500, gate = 1 |
 )
 
 
-~mySynth = Synth(\syntho);
+~mySynth = Synth(\syntho, [\freq, rrand(20, 4000)]);
 ~mySynth.set(\freq, 700);
 ~mySynth.set(\gate,0);
 //~mySynth.free();
