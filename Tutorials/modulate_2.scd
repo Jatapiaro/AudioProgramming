@@ -1,6 +1,5 @@
 s.boot();
 
-
 (
 z = {
 	arg noiseHz = 8;
@@ -20,7 +19,7 @@ z = {
 }.play();
 )
 
-z.(\noiseHz, 50);
+z.set(\noiseHzn , exprand(4,64));
 z.free();
 
 s.quit();

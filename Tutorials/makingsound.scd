@@ -45,4 +45,10 @@ z = {
 }.play()
 )
 
+z.set(\freq, 330);
+z.set(\amp, 0.125);
+z.set(\freq, 660, \amp, 1);
+z.set(\freq, 79.midicps, \amp, 550);
+z.free();
+
 s.quit();
